@@ -1,24 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="m6f-7I-sRF">
+            <objects>
+                <viewController id="y5e-1T-Bpm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Crb-jt-U2I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chuck-mystic" translatesAutoresizingMaskIntoConstraints="NO" id="x7Q-HU-FTd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1N6-HQ-BNA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x7Q-HU-FTd" firstAttribute="trailing" secondItem="Crb-jt-U2I" secondAttribute="trailing" id="228-ye-jtX"/>
+                            <constraint firstItem="x7Q-HU-FTd" firstAttribute="leading" secondItem="Crb-jt-U2I" secondAttribute="leading" id="5CZ-a7-ZLn"/>
+                            <constraint firstItem="x7Q-HU-FTd" firstAttribute="top" secondItem="Crb-jt-U2I" secondAttribute="top" id="H0H-cO-8XO"/>
+                            <constraint firstAttribute="bottom" secondItem="x7Q-HU-FTd" secondAttribute="bottom" id="R3r-Ae-P2A"/>
+                            <constraint firstItem="x7Q-HU-FTd" firstAttribute="centerY" secondItem="Crb-jt-U2I" secondAttribute="centerY" id="V9g-I2-JuX"/>
+                            <constraint firstItem="x7Q-HU-FTd" firstAttribute="centerX" secondItem="Crb-jt-U2I" secondAttribute="centerX" id="vPa-xu-r06"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcO-PE-fH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-820.28985507246387" y="85.714285714285708"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WildMan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chuck-filter" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-BJ-hjg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dG6-6Q-dSb">
+                                <rect key="frame" x="16" y="44" width="382" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-gz-g2G" userLabel="Score Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="58.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" &quot;A man rode his horse into a Taco Bell.&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taV-cs-2yV" userLabel="Question Label">
+                                        <rect key="frame" x="0.0" y="66.5" width="382" height="519.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8c-xy-8ZF">
+                                        <rect key="frame" x="0.0" y="594" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="y11-s2-ZUD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Florida" backgroundImage="Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-AN-2t6">
+                                        <rect key="frame" x="0.0" y="652" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Tj8-fN-9qO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Texas" backgroundImage="Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-S7-3j1">
+                                        <rect key="frame" x="0.0" y="710" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ieZ-Bb-f9y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Arizona" backgroundImage="Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A7-BT-fxa">
+                                        <rect key="frame" x="0.0" y="768" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5EI-2I-J1C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="California" backgroundImage="Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EhG-BJ-hjg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="DJP-lt-QRb"/>
+                            <constraint firstItem="EhG-BJ-hjg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MRZ-q1-1Ne"/>
+                            <constraint firstItem="dG6-6Q-dSb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NIj-Iu-S4Z"/>
+                            <constraint firstItem="EhG-BJ-hjg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rjq-h2-F5O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dG6-6Q-dSb" secondAttribute="bottom" id="dqM-dz-vz2"/>
+                            <constraint firstAttribute="bottom" secondItem="EhG-BJ-hjg" secondAttribute="bottom" id="e52-VQ-Byc"/>
+                            <constraint firstItem="dG6-6Q-dSb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fVz-mu-hun"/>
+                            <constraint firstItem="EhG-BJ-hjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0b-WO-w7n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dG6-6Q-dSb" secondAttribute="trailing" constant="16" id="i7A-xy-dSJ"/>
+                            <constraint firstItem="EhG-BJ-hjg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o0J-GS-hd5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="16.923076923076923" y="86.018957345971558"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="322" height="68"/>
+        <image name="chuck-filter" width="1024" height="1024"/>
+        <image name="chuck-mystic" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
