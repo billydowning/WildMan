@@ -105,6 +105,9 @@
                                         <state key="normal" title="Florida" backgroundImage="Image">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eD-1y-KKO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-AN-2t6">
                                         <rect key="frame" x="0.0" y="588" width="382" height="50"/>
@@ -115,6 +118,9 @@
                                         <state key="normal" title="Texas" backgroundImage="Image">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OT7-YN-rF6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-S7-3j1">
                                         <rect key="frame" x="0.0" y="646" width="382" height="50"/>
@@ -125,6 +131,9 @@
                                         <state key="normal" title="Arizona" backgroundImage="Image">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imB-8o-KVV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -146,7 +155,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="UNO-En-PyX"/>
                     <connections>
-                        <segue destination="JWq-qU-WbB" kind="show" id="zLs-p7-KZS"/>
+                        <outlet property="HeadlineText" destination="taV-cs-2yV" id="MGT-at-Hbx"/>
+                        <outlet property="choice1Button" destination="j8c-xy-8ZF" id="dhb-J1-fN1"/>
+                        <outlet property="choice2Button" destination="bTb-AN-2t6" id="IzY-lE-77g"/>
+                        <outlet property="choice3Button" destination="bUl-S7-3j1" id="EJk-Of-CzU"/>
+                        <outlet property="questionNumberLabel" destination="rPX-EV-XRz" id="Q5X-bc-nOf"/>
+                        <segue destination="JWq-qU-WbB" kind="show" identifier="goToResults" id="zLs-p7-KZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
