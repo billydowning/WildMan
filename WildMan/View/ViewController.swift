@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice3Button: UIButton!
     
     var gameBrain = GameBrain()
+    var player: AVAudioPlayer!
     
 
     override func viewDidLoad() {
@@ -30,8 +32,11 @@ class ViewController: UIViewController {
         
         if userGotItRight {
             sender.backgroundColor = UIColor.green
+            playRightSound()
         } else {
             sender.backgroundColor = UIColor.red
+            playWrongSound()
+            
         }
         let questionNumber = gameBrain.getQuestionNumber()
         
@@ -42,7 +47,7 @@ class ViewController: UIViewController {
             gameBrain.restartGame()
         }
         
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @objc func updateUI() {
         HeadlineText.text = gameBrain.getQuestionText()
@@ -60,10 +65,25 @@ class ViewController: UIViewController {
         if segue.identifier == "goToResults" {
             let destinationVC = segue.destination as! ResultsViewController
             destinationVC.score = gameBrain.getScore()
+            destinationVC.comment = gameBrain.getComment()
             
             
         }
     
+    }
+    
+    func playRightSound() {
+        let url = Bundle.main.url(forResource: "right", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+                
+    }
+    
+    func playWrongSound() {
+        let url = Bundle.main.url(forResource: "wrong", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+                
     }
 
 }

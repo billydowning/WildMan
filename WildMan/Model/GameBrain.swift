@@ -35,6 +35,7 @@ struct GameBrain {
     var questionNumber = 0
     var score = 0
     
+    
     mutating func checkAnswer(_ userAnswer: String) -> Bool {
         if userAnswer == game[questionNumber].answer {
             score += 1
@@ -45,6 +46,15 @@ struct GameBrain {
     }
     func getScore() -> Int {
         return score
+    }
+    func getComment() -> String {
+        if score < 10 {
+            return "You need more crazy in your life!"
+        } else if score < 15 {
+            return "You're pretty damn crazy!"
+        } else {
+            return "You're BUCK WILD!"
+        }
     }
     func getQuestionNumber() -> Int {
         return questionNumber
@@ -74,6 +84,7 @@ struct GameBrain {
     }
     
     mutating func nextQuestion() {
+        
         if questionNumber + 1 < 21 {
             questionNumber += 1
         } else {

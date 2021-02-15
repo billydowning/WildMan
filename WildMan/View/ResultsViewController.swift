@@ -14,6 +14,7 @@ class ResultsViewController: UIViewController {
     
     
     var score: Int?
+    var comment: String?
     var gameBrain = GameBrain()
     
     
@@ -24,6 +25,7 @@ class ResultsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         scoreLabel.text = "\(score ?? 0)/21"
+        commentLabel.text = comment
     }
     
     @IBAction func newGamePressed(_ sender: UIButton) {
