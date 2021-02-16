@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import Firebase
 
 struct GameBrain {
+    let db = Firestore.firestore()
+    
+    var headlines: [Headline] = []
+    
+    
     let game = [
         Headline(h: "Thief Berated Mom Who Left 4-Year-Old Boy In Car He Stole.", a: "Oregon", c1: "Florida", c2: "Texas", c3: "Oregon"),
         Headline(h: "Naked Fugitive Rescued From Crocodile-Infested Mangroves By Fishermen.", a: "Australia", c1: "Florida", c2: "Texas", c3: "Australia"),
@@ -34,6 +40,7 @@ struct GameBrain {
     ]
     var questionNumber = 0
     var score = 0
+    
     
     
     mutating func checkAnswer(_ userAnswer: String) -> Bool {
