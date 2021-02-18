@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateUI()
+        gameBrain.getQuestionText()
+        
+        
         
     }
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -50,7 +52,7 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @objc func updateUI() {
-        HeadlineText.text = gameBrain.getQuestionText()
+//        HeadlineText.text = gameBrain.getQuestionText()
         choice1Button.setTitle(gameBrain.getChoice1Text(), for: .normal)
         choice1Button.backgroundColor = UIColor.clear
         choice2Button.setTitle(gameBrain.getChoice2Text(), for: .normal
