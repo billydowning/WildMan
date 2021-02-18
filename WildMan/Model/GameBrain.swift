@@ -44,27 +44,15 @@ struct GameBrain {
     }
     
     func getQuestionText() {
-        self.headlines = []
         db.collection("headlines").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                if let snapshotDocs = querySnapshot?.documents {
-                    for doc in snapshotDocs {
-                        let data = doc.data()
-                        if let headlineText = data["headline"] as? String, let answer = data["answer"] as? String, let c1 = data["choice1"] as? String, let c2 = data["choice2"] as? String, let c3 = data["choice3"] as? String {
-                        let newHeadline = Headline(h: headlineText, a: answer, c1: c1, c2: c2, c3: c3)
-                            self.headlines.append(newHeadline)
-                        }
-                    }
+                if let testData = querySnapshot?.documents[questionNumber].get("headline") {
+                    print(testData)
                 }
             }
         }
-
-        
-        
-        
-        
     }
     func getChoice1Text() -> String {
         return headlines[questionNumber].choice1
