@@ -43,15 +43,20 @@ struct GameBrain {
         return questionNumber
     }
     
-    func getQuestionText() {
+    func getQuestionText() -> String {
         db.collection("headlines").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                if let testData = querySnapshot?.documents[questionNumber].get("headline") {
-                    print(testData)
+                var headlineText = querySnapshot?.documents[questionNumber].get("headline") as? String ?? ""
+                
+                DispatchQueue.main.async {
+                    self.headlineText = headlineText
                 }
+                
             }
+            
+            
         }
     }
     func getChoice1Text() -> String {
