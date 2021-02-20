@@ -32,9 +32,20 @@ struct GameBrain {
         Headline(h: "TSA Agent Convicted of Tricking Woman into Showing Him Her Breasts.", a: "California", c1: "Florida", c2: "California", c3: "Texas"),
         Headline(h: "Geologist Finds Rare Formation Inside Rock That Looks Exactly Like Cookie Monster on Sesame Street.", a: "Brazil", c1: "Florida", c2: "Brazil", c3: "Spain"),
         Headline(h: "Woman calls police after missing out on McDonald's breakfast.", a: "UK", c1: "Florida", c2: "Brazil", c3: "UK"),
+        Headline(h: "Woman texted 911 for advice on how to file for a divorce.", a: "Florida", c1: "Florida", c2: "California", c3: "Arizona"),
+        Headline(h: "A man filed a lawsuit against the state for refusing to acknowledge his marriage to a computer.", a: "Alabama", c1: "Florida", c2: "Georgia", c3: "Alabama"),
+        Headline(h: "A group of naked Jehovah's Witnesses kidnapped two adults and a baby. They thought it was the end of the world and wanted to save them.", a: "Alberta", c1: "Florida", c2: "Alberta", c3: "Vancouver"),
+        Headline(h: "Man Stole Bulldozer, Ran Down Biden Signs", a: "Florida", c1: "Florida", c2: "Texas", c3: "Arizona"),
+        Headline(h: "Man arrested after performing botched castration surgery.", a: "Florida", c1: "Florida", c2: "California", c3: "Washington"),
+        Headline(h: "Burglary suspect, 39, dressed only in his underwear strikes Sheriff's deputy across the face with bible while screaming 'I condemn you!'", a: "Florida", c1: "Florida", c2: "Texas", c3: "North Carolina"),
+        Headline(h: "Woman sues for paternity tests on goats", a: "Florida", c1: "Florida", c2: "Mississippi", c3: "Louisiana"),
+        Headline(h: "Man calls cops after burger with mayo is left at his door.", a: "Florida", c1: "Florida", c2: "New York", c3: "New Jersey"),
+        Headline(h: "Naked man tells authorities he's Batman.", a: "Florida", c1: "Florida", c2: "California", c3: "New Mexico"),
+        Headline(h: "Woman places 400 pamphlets, porn-filled Easter eggs in strangers' mailboxes.", a: "Florida", c1: "Florida", c2: "Texas", c3: "Alabama")
+        
         
     ]
-    var questionNumber = Int.random(in: 0..<21)
+    var questionNumber = Int.random(in: 0..<30)
     var score = 0
     var questionTotal = 0
     
@@ -82,7 +93,7 @@ struct GameBrain {
     
     mutating func restartGame() {
         questionTotal = 0
-        questionNumber = Int.random(in: 0..<21)
+        questionNumber = Int.random(in: 0..<30)
         score = 0
     }
     
@@ -91,7 +102,7 @@ struct GameBrain {
         
         if questionTotal + 1 < 11 {
             questionTotal += 1
-            questionNumber = Int.random(in: 0..<21)
+            questionNumber = Int.random(in: 0..<30)
         } else {
             questionNumber = 0
             score = 0
