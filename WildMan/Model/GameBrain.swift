@@ -34,8 +34,9 @@ struct GameBrain {
         Headline(h: "Woman calls police after missing out on McDonald's breakfast.", a: "UK", c1: "Florida", c2: "Brazil", c3: "UK"),
         
     ]
-    var questionNumber = 0
+    var questionNumber = Int.random(in: 0..<21)
     var score = 0
+    var questionTotal = 0
     
     
     
@@ -51,9 +52,9 @@ struct GameBrain {
         return score
     }
     func getComment() -> String {
-        if score < 10 {
+        if score < 7 {
             return "You need more crazy in your life!"
-        } else if score < 15 {
+        } else if score < 9 {
             return "You're pretty damn crazy!"
         } else {
             return "You're BUCK WILD!"
@@ -61,6 +62,9 @@ struct GameBrain {
     }
     func getQuestionNumber() -> Int {
         return questionNumber
+    }
+    func getQuestionTotal() -> Int {
+        return questionTotal
     }
     
     func getQuestionText() -> String {
@@ -77,19 +81,17 @@ struct GameBrain {
     }
     
     mutating func restartGame() {
-        questionNumber = 0
+        questionTotal = 0
+        questionNumber = Int.random(in: 0..<21)
         score = 0
     }
     
     
-    func getProgress() -> Float {
-        return Float(questionNumber + 1) / Float(game.count)
-    }
-    
     mutating func nextQuestion() {
         
-        if questionNumber + 1 < 21 {
-            questionNumber += 1
+        if questionTotal + 1 < 11 {
+            questionTotal += 1
+            questionNumber = Int.random(in: 0..<21)
         } else {
             questionNumber = 0
             score = 0

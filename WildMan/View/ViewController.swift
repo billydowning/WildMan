@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        updateUI()
         
         
         
@@ -40,9 +40,9 @@ class ViewController: UIViewController {
             playWrongSound()
             
         }
-        let questionNumber = gameBrain.getQuestionNumber()
+        let questionTotal = gameBrain.getQuestionTotal()
         
-        if questionNumber + 1 < 21 {
+        if questionTotal + 1 < 11 {
             gameBrain.nextQuestion()
         } else {
             self.performSegue(withIdentifier: "goToResults", sender: self)
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         choice2Button.backgroundColor = UIColor.clear
         choice3Button.setTitle(gameBrain.getChoice3Text(), for: .normal)
         choice3Button.backgroundColor = UIColor.clear
-        questionNumberLabel.text = "Q: \(gameBrain.getQuestionNumber() + 1 )/21"
+        questionNumberLabel.text = "Q: \(gameBrain.getQuestionTotal() + 1 )/11"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){

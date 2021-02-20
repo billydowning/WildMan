@@ -24,7 +24,7 @@ class ResultsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        scoreLabel.text = "\(score ?? 0)/21"
+        scoreLabel.text = "\(score ?? 0)/11"
         commentLabel.text = comment
     }
     
