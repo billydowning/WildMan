@@ -41,7 +41,10 @@ struct GameBrain {
         Headline(h: "Woman sues for paternity tests on goats", a: "Florida", c1: "Florida", c2: "Mississippi", c3: "Louisiana"),
         Headline(h: "Man calls cops after burger with mayo is left at his door.", a: "Florida", c1: "Florida", c2: "New York", c3: "New Jersey"),
         Headline(h: "Naked man tells authorities he's Batman.", a: "Florida", c1: "Florida", c2: "California", c3: "New Mexico"),
-        Headline(h: "Woman places 400 pamphlets, porn-filled Easter eggs in strangers' mailboxes.", a: "Florida", c1: "Florida", c2: "Texas", c3: "Alabama")
+        Headline(h: "Woman places 400 pamphlets, porn-filled Easter eggs in strangers' mailboxes.", a: "Florida", c1: "Florida", c2: "Texas", c3: "Alabama"),
+        Headline(h: "Man stabbed with samurai sword after not buying pot for partner, report says.", a: "Michigan", c1: "Florida", c2: "Michigan", c3: "California"),
+        Headline(h: "Mystery smell overwhelms county again, investigators baffled.", a: "Pennsylvania", c1: "Pennsylvania", c2: "Florida", c3: "California"),
+        
         
         
     ]
