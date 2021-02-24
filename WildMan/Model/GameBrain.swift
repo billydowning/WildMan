@@ -44,6 +44,14 @@ struct GameBrain {
         Headline(h: "Woman places 400 pamphlets, porn-filled Easter eggs in strangers' mailboxes.", a: "Florida", c1: "Florida", c2: "Texas", c3: "Alabama"),
         Headline(h: "Man stabbed with samurai sword after not buying pot for partner, report says.", a: "Michigan", c1: "Florida", c2: "Michigan", c3: "California"),
         Headline(h: "Mystery smell overwhelms county again, investigators baffled.", a: "Pennsylvania", c1: "Pennsylvania", c2: "Florida", c3: "California"),
+        Headline(h: "Homeowner uses motion-activated sprinkler with 'impressive amount of pressure' to thwart thieves.", a: "California", c1: "Florida", c2: "California", c3: "Texas"),
+        Headline(h: "Boy, 8, wins $200 worth of cannabis products at youth hockey tournament.", a: "Canada", c1: "California", c2: "Colorado", c3: "Canada"),
+        Headline(h: "Man appeals court ruling against ‘GRABHER’ vanity license plate.", a: "Canada", c1: "Florida", c2: "California", c3: "Canada"),
+        Headline(h: "Woman gives birth in Walmart toilet paper aisle, report says.", a: "Missouri", c1: "Florida", c2: "Missouri", c3: "Arizona"),
+        Headline(h: "Woman, 93, makes coronavirus plea for more beer amid lockdown in viral photo.", a: "Pennsylvania", c1: "Florida", c2: "Georgia", c3: "Pennsylvania"),
+        Headline(h: "Man drove to 11 different Wendy's restaurants twice in 1 day to stock up on free nuggets, report says.", a: "Oregon", c1: "Florida", c2: "Texas", c3: "Oregon"),
+        Headline(h: "Hospital security guard delivers baby.", a: "Florida", c1: "Florida", c2: "Georgia", c3: "Louisiana"),
+        Headline(h: "Serial-killer 'expert' admits he made up his experience — even the murder of his nonexistent wife.", a: "France", c1: "Florida", c2: "Germany", c3: "France"),
         
         
         
