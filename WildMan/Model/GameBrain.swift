@@ -63,8 +63,8 @@ struct GameBrain {
     var questionNumber = Int.random(in: 0...43)
     var score = 0
     var questionTotal = 0
-    var usedNumbers = [Int]()
     var currentQuestionNumber = 0
+    var usedNumbers = [Int]()
     
     
     
@@ -113,6 +113,7 @@ struct GameBrain {
         questionNumber = Int.random(in: 0...43)
         score = 0
         usedNumbers = []
+        
     }
     
     
@@ -124,10 +125,9 @@ struct GameBrain {
             questionTotal += 1
             currentQuestionNumber = Int.random(in: 0...43)
             usedNumbers.append(currentQuestionNumber)
+            print(usedNumbers)
             if usedNumbers.contains(currentQuestionNumber){
                 questionNumber = Int.random(in: 0...43)
-            } else {
-                currentQuestionNumber = questionNumber
             }
         } else {
             questionNumber = 0
