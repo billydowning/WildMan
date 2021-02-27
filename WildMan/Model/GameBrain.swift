@@ -52,13 +52,18 @@ struct GameBrain {
         Headline(h: "Man drove to 11 different Wendy's restaurants twice in 1 day to stock up on free nuggets, report says.", a: "Oregon", c1: "Florida", c2: "Texas", c3: "Oregon"),
         Headline(h: "Hospital security guard delivers baby.", a: "Florida", c1: "Florida", c2: "Georgia", c3: "Louisiana"),
         Headline(h: "Serial-killer 'expert' admits he made up his experience — even the murder of his nonexistent wife.", a: "France", c1: "Florida", c2: "Germany", c3: "France"),
+        Headline(h: "Coyote chases roadrunner on video: 'It's happening right now y'all!!!'", a: "Arizona", c1: "Florida", c2: "Arizona", c3: "California"),
+        Headline(h: "Man tried to set 4-year-old on fire, burn 'demon' out of him, police say.", a: "Pennsylvania", c1: "Florida", c2: "Pennsylvania", c3: "New York"),
+        Headline(h: "Tennis player shows how she stays in shape during coronavirus outbreak: Pushing cars.", a: "Ukraine", c1: "Florida", c2: "Ukraine", c3: "Russia"),
+        
         
         
         
     ]
-    var questionNumber = Int.random(in: 0..<30)
+    var questionNumber = Int.random(in: 0..<43)
     var score = 0
     var questionTotal = 0
+    var usedNumbers = [Int]()
     
     
     
@@ -104,16 +109,22 @@ struct GameBrain {
     
     mutating func restartGame() {
         questionTotal = 0
-        questionNumber = Int.random(in: 0..<30)
+        questionNumber = Int.random(in: 0..<43)
         score = 0
     }
     
     
     mutating func nextQuestion() {
         
+        
+        
         if questionTotal + 1 < 11 {
             questionTotal += 1
-            questionNumber = Int.random(in: 0..<30)
+            questionNumber = Int.random(in: 0..<43)
+            usedNumbers.append(questionNumber)
+            if usedNumbers.contains(questionNumber){
+                questionNumber = Int.random(in: 0..<43)
+            }
         } else {
             questionNumber = 0
             score = 0
