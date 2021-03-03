@@ -76,6 +76,7 @@ struct GameBrain {
             return false
         }
     }
+    
     func getScore() -> Int {
         return score
     }
