@@ -55,12 +55,23 @@ struct GameBrain {
         Headline(h: "Coyote chases roadrunner on video: 'It's happening right now y'all!!!'", a: "Arizona", c1: "Florida", c2: "Arizona", c3: "California"),
         Headline(h: "Man tried to set 4-year-old on fire, burn 'demon' out of him, police say.", a: "Pennsylvania", c1: "Florida", c2: "Pennsylvania", c3: "New York"),
         Headline(h: "Tennis player shows how she stays in shape during coronavirus outbreak: Pushing cars.", a: "Ukraine", c1: "Florida", c2: "Ukraine", c3: "Russia"),
+        Headline(h: "Man dressed as Grim Reaper goes on a beach tour to scare off visitors.", a: "Florida", c1: "Florida", c2: "California", c3: "New Jersey"),
+        Headline(h: "People shoved hair dyers up their noses to 'cure' COVID.", a: "Florida", c1: "Florida", c2: "New York", c3: "California"),
+        Headline(h: "Man with machete tattoo on his face accused of machete attack.", a: "Florida", c1: "Florida", c2: "California", c3: "Oregon"),
+        Headline(h: "Man dies after window closes on him during burglary attempt.", a: "Florida", c1: "Florida", c2: "New Jersey", c3: "Washington"),
+        Headline(h: "Leopard mauls man who paid for 'full-contact experience' with big cat.", a: "Florida", c1: "Florida", c2: "Arizona", c3: "Arkansas"),
+        Headline(h: "Woman with bullet in her head given band-aid, released from hospital.", a: "Florida", c1: "Florida", c2: "Alabama", c3: "Texas"),
+        Headline(h: "Girl put 'Help! Get Me Out of Here' sign on window because she was struggling with homework.", a: "Florida", c1: "Florida", c2: "Arizona", c3: "California"),
+        Headline(h: "Whole or almond milk? Fight over which is better lands man in jail.", a: "Florida", c1: "Florida", c2: "New Jersey", c3: "Massachusetts"),
+        
+        
+        
         
         
         
         
     ]
-    var questionNumber = Int.random(in: 0...43)
+    var questionNumber = Int.random(in: 0...51)
     var score = 0
     var questionTotal = 0
     var currentQuestionNumber = 0
@@ -108,10 +119,13 @@ struct GameBrain {
     func getChoice3Text() -> String {
         return game[questionNumber].choice3
     }
+    func showRightAnswer() -> String {
+        return game[questionNumber].answer
+    }
     
     mutating func restartGame() {
         questionTotal = 0
-        questionNumber = Int.random(in: 0...43)
+        questionNumber = Int.random(in: 0...51)
         score = 0
         usedNumbers = []
         
@@ -124,11 +138,11 @@ struct GameBrain {
         
         if questionTotal + 1 < 11 {
             questionTotal += 1
-            currentQuestionNumber = Int.random(in: 0...43)
+            currentQuestionNumber = Int.random(in: 0...51)
             usedNumbers.append(currentQuestionNumber)
             print(usedNumbers)
             if usedNumbers.contains(currentQuestionNumber){
-                questionNumber = Int.random(in: 0...43)
+                questionNumber = Int.random(in: 0...51)
             }
         } else {
             questionNumber = 0
